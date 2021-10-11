@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDADE</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+            background-color: slategrey;
+            
+        }
+        input {
+            font: normal 18px Arial;
+            width: 100px;
+        }
+        div#res {
+            line-height: 50px;
+        }
+</style>
+</head>
+<body>
+    <H1>Você é maior de idade?</H1>
+    Digite aqui sua idade: <input type="number" name="txtn" id="txtn">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id="res"
+    
+    ></div>
+    <script>
+        function Verificar() {
+            var txti = window.document.getElementById('txtn')
+            var res = window.document.getElementById('res')
+            var r = Number(txti.value)
+            if (r >= 18) {
+                res.innerText = (`Você tem ${r} anos e é maior de idade, seja bem vindo! :)`)
+                
+            } else {
+                res.innerText = (`Você tem apenas ${r} anos, sinto muito mas você não pode entrar!`)
+            }
+                
+        }
+
+
+    </script>
+    
+</body>
+</html>

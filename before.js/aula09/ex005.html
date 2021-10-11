@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 09 (DOM)</title>
+    <style>
+        body {
+            background-color: rgb(23, 99, 140);
+            color: white;
+            font: normal 16pt Arial;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <h1>LISTA DE COMIDAS</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em <strong>JavaScript</strong>!</p>
+    <p>Arroz</p>
+    <p id="msg">Feijão
+    <p>Massa</p>  
+    <p>Batata Frita</p>
+    <div>ISSO FOI O QUE VOCÊ ESCOLHEU:</div>
+    <script>
+        window.alert('Escolha uma comida: ARROZ (1), FEIJÃO (2), MASSA (3) E BATATA FRITA (4)')
+        var comida = window.prompt('Qual comida você escolheu?')
+        window.confirm('Deseja continuar?')
+        var comidas = window.document.getElementsByTagName('p')[comida]
+        window.document.write('Você escolheu: ' +comidas.innerText)  
+        /*
+        var d = window.document.getElementsByName('msg')[0]
+        d.style.background = 'red'
+        */
+        
+    </script>
+    
+</body>
+</html>

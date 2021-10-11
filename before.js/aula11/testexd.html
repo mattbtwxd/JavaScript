@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício01</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+            background-color: rgb(0, 71, 118);
+
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 300px;
+        }
+        div#res {
+            line-height: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>
+   Digite o nome do país que você mora: <input type="text" name="txtn" id="txtn">
+   <input type="button" value="Pesquisar" onclick="VERIFICAR()"> 
+   <div id="res">
+
+   </div>
+   <script>
+    function VERIFICAR() {
+        var txtnac = window.document.querySelector('input#txtn')
+        var res = window.document.getElementById('res')
+        var nac = String(txtnac.value).toUpperCase()
+        res.innerText = `Você mora em ${nac}, então você é BRASILEIRO!`
+        document.body.style.background = '#00222a'
+        if (nac != 'BRASIL') {
+            res.innerText = `Você mora em ${nac}, então você é ESTRANGEIRO!`
+        document.body.style.background = '#677977'
+            
+        }
+
+    }
+   </script>
+    
+</body>
+</html>
